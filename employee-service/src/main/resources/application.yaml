@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: employee-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/employeedb
+
+  security:
+    user:
+      name: admin
+      password: admin123
+
+server:
+  port: 8081
+
+logging:
+  file:
+    name: logs/employee-service.log
+
+  level:
+    root: INFO
+
