@@ -5,6 +5,7 @@ import com.ems.employee.entity.Employee;
 import com.ems.employee.exception.EmployeeNotFoundException;
 import com.ems.employee.repository.EmployeeRepository;
 import com.ems.employee.service.EmployeeService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CacheEvict;
@@ -21,10 +22,10 @@ import java.util.stream.Collectors;
  *  - @CachePut     : always runs the method and updates the cache (used on update)
  *  - @CacheEvict   : removes the entry from cache (used on delete)
  */
+@Slf4j
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
     private static final String CACHE_NAME = "employees";
 
     private final EmployeeRepository employeeRepository;
@@ -33,15 +34,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
+
     // ------------------------------------------------------------------ CREATE
     @Override
     public EmployeeDTO createEmployee(EmployeeDTO employeeDTO) {
-        logger.info("Creating new employee with name: {}", employeeDTO.getName());
+        log.info("Creating new employee with name: {}", employeeDTO.getName());
 
         Employee employee = mapToEntity(employeeDTO);
         Employee savedEmployee = employeeRepository.save(employee);
 
-        logger.debug("Employee saved with id: {}", savedEmployee.getId());
+        log.debug("Employee saved with id: {}", savedEmployee.getId());
         return mapToDTO(savedEmployee);
     }
 
@@ -49,7 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @Cacheable(value = CACHE_NAME, key = "'all'")
     public List<EmployeeDTO> getAllEmployees() {
-        logger.info("Fetching all employees from database");
+        log.info("Fetching all employees from database");
 
         return employeeRepository.findAll()
                 .stream()
@@ -61,13 +63,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @Cacheable(value = CACHE_NAME, key = "#id")
     public EmployeeDTO getEmployeeById(String id) {
-        logger.info("Fetching employee with id: {}", id);
+        log.info("Fetching employee with id: {}", id);
 
-        // Java 8: Optional — avoids NullPointerException on missing records
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with id: " + id));
 
-        logger.debug("Employee found: {}", employee.getName());
+        log.debug("Employee found: {}", employee.getName());
         return mapToDTO(employee);
     }
 
@@ -75,7 +76,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @CachePut(value = CACHE_NAME, key = "#id")
     public EmployeeDTO updateEmployee(String id, EmployeeDTO employeeDTO) {
-        logger.info("Updating employee with id: {}", id);
+        log.info("Updating employee with id: {}", id);
 
         Employee existing = employeeRepository.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with id: " + id));
@@ -86,7 +87,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         existing.setAddress(employeeDTO.getAddress());
 
         Employee updated = employeeRepository.save(existing);
-        logger.debug("Employee updated: {}", updated.getId());
+        log.debug("Employee updated: {}", updated.getId());
 
         return mapToDTO(updated);
     }
@@ -95,21 +96,18 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @CacheEvict(value = CACHE_NAME, allEntries = true)
     public void deleteEmployee(String id) {
-        logger.info("Deleting employee with id: {}", id);
+        log.info("Deleting employee with id: {}", id);
 
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with id: " + id));
 
         employeeRepository.delete(employee);
-        logger.debug("Employee deleted with id: {}", id);
+        log.debug("Employee deleted with id: {}", id);
     }
 
     // ------------------------------------------------------------------ HELPERS
+    //  Converts EmployeeDTO → Employee entity.
 
-    /*
-      Converts EmployeeDTO → Employee entity.
-      Reusable mapping method — keeps the code DRY.
-     */
     private Employee mapToEntity(EmployeeDTO dto) {
         Employee employee = new Employee();
         employee.setName(dto.getName());

@@ -1,265 +1,554 @@
-2026-05-20T18:43:48.814+05:30  INFO 12396 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 12396 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
-2026-05-20T18:43:48.816+05:30  INFO 12396 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-20T18:43:48.897+05:30  INFO 12396 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-20T18:43:48.950+05:30  INFO 12396 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-20T18:43:49.871+05:30  INFO 12396 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-20T18:43:49.963+05:30  INFO 12396 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 1 MongoDB repository interface.
-2026-05-20T18:43:51.735+05:30  INFO 12396 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-05-20T18:43:51.769+05:30  INFO 12396 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-20T18:43:51.771+05:30  INFO 12396 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-20T18:43:51.875+05:30  INFO 12396 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-20T18:43:51.876+05:30  INFO 12396 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2925 ms
-2026-05-20T18:43:52.529+05:30  INFO 12396 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4d210665, com.mongodb.Jep395RecordCodecProvider@407c9f8d, com.mongodb.KotlinCodecProvider@172bba24]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-20T18:43:52.552+05:30  INFO 12396 --- [employee-service] [cluster-ClusterId{value='6a0db3907759460f3ca8f503', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=50859600, minRoundTripTimeNanos=0}
-2026-05-20T18:43:52.870+05:30  INFO 12396 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-05-20T18:43:54.006+05:30  WARN 12396 --- [employee-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-05-22T11:41:27.449+05:30  INFO 27568 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 27568 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
+2026-05-22T11:41:27.455+05:30  INFO 27568 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-22T11:41:27.522+05:30  INFO 27568 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-22T11:41:27.523+05:30  INFO 27568 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-22T11:41:28.273+05:30  INFO 27568 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-22T11:41:28.340+05:30  INFO 27568 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 MongoDB repository interface.
+2026-05-22T11:41:29.894+05:30  INFO 27568 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-05-22T11:41:29.930+05:30  INFO 27568 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-22T11:41:29.931+05:30  INFO 27568 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-22T11:41:30.079+05:30  INFO 27568 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-22T11:41:30.080+05:30  INFO 27568 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2556 ms
+2026-05-22T11:41:30.796+05:30  INFO 27568 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4b5d8b91, com.mongodb.Jep395RecordCodecProvider@5414d646, com.mongodb.KotlinCodecProvider@1430c5d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-22T11:41:30.878+05:30  INFO 27568 --- [employee-service] [cluster-ClusterId{value='6a0ff39285c4267e5c26a4e6', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=93357500, minRoundTripTimeNanos=0}
+2026-05-22T11:41:31.250+05:30  INFO 27568 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-22T11:41:32.389+05:30  INFO 27568 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-22T11:41:33.269+05:30  INFO 27568 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-05-22T11:41:33.288+05:30  INFO 27568 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 6.754 seconds (process running for 8.375)
+2026-05-22T11:44:45.520+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-22T11:44:45.522+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-22T11:44:45.526+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-05-22T11:44:55.377+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-4] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
+2026-05-22T11:44:55.379+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-4] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
+2026-05-22T11:44:55.612+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-4] c.e.e.controller.EmployeeController      : Returning 3 employees
+2026-05-22T11:44:56.075+05:30 ERROR 27568 --- [employee-service] [http-nio-8081-exec-7] c.e.e.exception.GlobalExceptionHandler   : Unexpected error occurred: No static resource favicon.ico.
+2026-05-22T11:44:56.099+05:30  WARN 27568 --- [employee-service] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-05-22T11:45:33.924+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-1] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
+2026-05-22T11:45:33.925+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-1] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
+2026-05-22T11:45:33.932+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-1] c.e.e.controller.EmployeeController      : Returning 3 employees
+2026-05-22T12:04:46.625+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-6] c.e.e.controller.EmployeeController      : GET /employees/6a0c597164a729be21fd9213 - Fetching employee
+2026-05-22T12:04:46.647+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-6] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching employee with id: 6a0c597164a729be21fd9213
+2026-05-22T12:04:46.835+05:30 ERROR 27568 --- [employee-service] [http-nio-8081-exec-6] c.e.e.exception.GlobalExceptionHandler   : Employee not found: Employee not found with id: 6a0c597164a729be21fd9213
+2026-05-22T12:04:46.873+05:30  WARN 27568 --- [employee-service] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ems.employee.exception.EmployeeNotFoundException: Employee not found with id: 6a0c597164a729be21fd9213]
+2026-05-22T12:05:03.508+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-9] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
+2026-05-22T12:05:03.509+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-9] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
+2026-05-22T12:05:03.556+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-9] c.e.e.controller.EmployeeController      : Returning 3 employees
+2026-05-22T12:05:45.203+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-10] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: someone
+2026-05-22T12:05:45.203+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-10] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: someone
+2026-05-22T12:05:45.342+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-10] c.e.e.controller.EmployeeController      : Employee created with id: 6a0ff94185c4267e5c26a4e7
+2026-05-22T12:06:36.035+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: raju
+2026-05-22T12:06:36.036+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-3] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: raju
+2026-05-22T12:06:36.042+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : Employee created with id: 6a0ff97485c4267e5c26a4e8
+2026-05-22T12:07:38.004+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-7] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: uttam
+2026-05-22T12:07:38.006+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-7] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: uttam
+2026-05-22T12:07:38.010+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-7] c.e.e.controller.EmployeeController      : Employee created with id: 6a0ff9b285c4267e5c26a4e9
+2026-05-22T12:07:55.238+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-8] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: rani
+2026-05-22T12:07:55.239+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-8] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: rani
+2026-05-22T12:07:55.299+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-8] c.e.e.controller.EmployeeController      : Employee created with id: 6a0ff9c385c4267e5c26a4ea
+2026-05-22T12:10:54.586+05:30  INFO 27568 --- [employee-service] [cluster-ClusterId{value='6a0ff39285c4267e5c26a4e6', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
 
-Using generated security password: 2edfe9ca-65ae-4f2b-93c0-e88c1b39bed3
+com.mongodb.MongoNodeIsRecoveringException: Command failed with error 11600 (InterruptedAtShutdown): 'interrupted at shutdown' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "interrupted at shutdown", "code": 11600, "codeName": "InterruptedAtShutdown"}
+	at com.mongodb.internal.connection.ProtocolHelper.createSpecialException(ProtocolHelper.java:264) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:206) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.2.jar:na]
 
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
+2026-05-22T12:11:04.668+05:30  INFO 27568 --- [employee-service] [cluster-ClusterId{value='6a0ff39285c4267e5c26a4e6', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
 
-2026-05-20T18:43:54.017+05:30  INFO 12396 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-20T18:43:54.379+05:30  INFO 12396 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-05-20T18:43:54.389+05:30  INFO 12396 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 6.686 seconds (process running for 8.184)
-2026-05-20T18:45:19.765+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-20T18:45:19.766+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-20T18:45:19.768+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-20T18:46:21.626+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
-2026-05-20T18:46:21.626+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-3] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
-2026-05-20T18:46:21.875+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : Returning 2 employees
-2026-05-20T18:46:42.612+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-5] c.e.e.controller.EmployeeController      : GET /employees/6a0c597164a729be21fd9213 - Fetching employee
-2026-05-20T18:46:42.612+05:30  INFO 12396 --- [employee-service] [http-nio-8081-exec-5] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching employee with id: 6a0c597164a729be21fd9213
-2026-05-20T19:01:02.444+05:30  INFO 12396 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-20T19:01:02.471+05:30  INFO 12396 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-20T19:13:53.742+05:30  INFO 11012 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 11012 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
-2026-05-20T19:13:53.746+05:30  INFO 11012 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-20T19:13:53.854+05:30  INFO 11012 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-20T19:13:53.854+05:30  INFO 11012 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-20T19:13:54.749+05:30  INFO 11012 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-20T19:13:54.828+05:30  INFO 11012 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 MongoDB repository interface.
-2026-05-20T19:13:56.074+05:30  INFO 11012 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-05-20T19:13:56.096+05:30  INFO 11012 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-20T19:13:56.097+05:30  INFO 11012 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-20T19:13:56.174+05:30  INFO 11012 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-20T19:13:56.176+05:30  INFO 11012 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2320 ms
-2026-05-20T19:13:56.687+05:30  INFO 11012 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@56858c25, com.mongodb.Jep395RecordCodecProvider@47f40a6e, com.mongodb.KotlinCodecProvider@49a9d117]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-20T19:13:56.716+05:30  INFO 11012 --- [employee-service] [cluster-ClusterId{value='6a0dba9c3a993b40285a9644', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=51561200, minRoundTripTimeNanos=0}
-2026-05-20T19:13:56.967+05:30  WARN 11012 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-05-20T19:13:57.848+05:30  WARN 11012 --- [employee-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.2.jar:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.5.2.jar:na]
+	... 3 common frames omitted
 
-Using generated security password: 5176d714-addf-48f9-b643-9bf1c20f1c8f
+2026-05-22T12:11:11.035+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: kajal
+2026-05-22T12:11:11.035+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-2] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: kajal
+2026-05-22T12:11:11.051+05:30  INFO 27568 --- [employee-service] [http-nio-8081-exec-2] org.mongodb.driver.cluster               : Waiting for server to become available for operation with ID 305. Remaining time: 29986 ms. Selector: WritableServerSelector, topology description: {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}].
+2026-05-22T12:11:41.143+05:30 ERROR 27568 --- [employee-service] [http-nio-8081-exec-2] c.e.e.exception.GlobalExceptionHandler   : Unexpected error occurred: Timed out while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}]
+2026-05-22T12:11:41.149+05:30  WARN 27568 --- [employee-service] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}]]
+2026-05-22T12:19:32.561+05:30  INFO 27568 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-22T12:19:32.577+05:30  INFO 27568 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-22T12:19:40.720+05:30  INFO 9312 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 9312 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
+2026-05-22T12:19:40.723+05:30  INFO 9312 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-22T12:19:40.797+05:30  INFO 9312 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-22T12:19:40.797+05:30  INFO 9312 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-22T12:19:41.585+05:30  INFO 9312 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-22T12:19:41.640+05:30  INFO 9312 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 MongoDB repository interface.
+2026-05-22T12:19:42.543+05:30  INFO 9312 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-05-22T12:19:42.563+05:30  INFO 9312 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-22T12:19:42.563+05:30  INFO 9312 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-22T12:19:42.619+05:30  INFO 9312 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-22T12:19:42.620+05:30  INFO 9312 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1823 ms
+2026-05-22T12:19:42.954+05:30  INFO 9312 --- [employee-service] [cluster-ClusterId{value='6a0ffc86e84ce15fd9efb7c1', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
 
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.2.jar:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.5.2.jar:na]
+	... 3 common frames omitted
 
-2026-05-20T19:13:57.861+05:30  INFO 11012 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-20T19:13:58.212+05:30  INFO 11012 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-05-20T19:13:58.226+05:30  INFO 11012 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 5.728 seconds (process running for 7.458)
-2026-05-20T19:14:18.892+05:30  INFO 11012 --- [employee-service] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-20T19:14:18.893+05:30  INFO 11012 --- [employee-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-20T19:14:18.895+05:30  INFO 11012 --- [employee-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-20T19:14:19.357+05:30  INFO 11012 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
-2026-05-20T19:14:19.357+05:30  INFO 11012 --- [employee-service] [http-nio-8081-exec-2] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
-2026-05-20T19:14:19.561+05:30  INFO 11012 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : Returning 2 employees
-2026-05-20T19:19:21.404+05:30  INFO 11012 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-20T19:19:21.417+05:30  INFO 11012 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-20T19:19:33.035+05:30  INFO 6068 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 6068 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
-2026-05-20T19:19:33.040+05:30  INFO 6068 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-20T19:19:33.156+05:30  INFO 6068 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-20T19:19:33.157+05:30  INFO 6068 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-20T19:19:34.133+05:30  INFO 6068 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-20T19:19:34.207+05:30  INFO 6068 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 MongoDB repository interface.
-2026-05-20T19:19:35.936+05:30  INFO 6068 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-05-20T19:19:35.973+05:30  INFO 6068 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-20T19:19:35.974+05:30  INFO 6068 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-20T19:19:36.074+05:30  INFO 6068 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-20T19:19:36.075+05:30  INFO 6068 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2915 ms
-2026-05-20T19:19:36.605+05:30  INFO 6068 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7589b34f, com.mongodb.Jep395RecordCodecProvider@4e0a2fef, com.mongodb.KotlinCodecProvider@75b0f51a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-20T19:19:36.627+05:30  INFO 6068 --- [employee-service] [cluster-ClusterId{value='6a0dbbf01965ebf423ab3081', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=46728300, minRoundTripTimeNanos=0}
-2026-05-20T19:19:37.006+05:30  WARN 6068 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-05-20T19:19:38.019+05:30  INFO 6068 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-05-20T19:19:38.036+05:30  INFO 6068 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 6.347 seconds (process running for 8.032)
-2026-05-20T19:20:00.106+05:30  INFO 6068 --- [employee-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-20T19:20:00.107+05:30  INFO 6068 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-20T19:20:00.109+05:30  INFO 6068 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-20T19:20:00.459+05:30  INFO 6068 --- [employee-service] [http-nio-8081-exec-1] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: chammu
-2026-05-20T19:20:00.463+05:30  INFO 6068 --- [employee-service] [http-nio-8081-exec-1] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: chammu
-2026-05-20T19:20:00.758+05:30  INFO 6068 --- [employee-service] [http-nio-8081-exec-1] c.e.e.controller.EmployeeController      : Employee created with id: 6a0dbc081965ebf423ab3082
-2026-05-20T19:20:32.739+05:30  INFO 6068 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-20T19:20:32.755+05:30  INFO 6068 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-20T19:20:45.271+05:30  INFO 22176 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 22176 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
-2026-05-20T19:20:45.276+05:30  INFO 22176 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-20T19:20:45.390+05:30  INFO 22176 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-20T19:20:45.391+05:30  INFO 22176 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-20T19:20:46.343+05:30  INFO 22176 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-20T19:20:46.423+05:30  INFO 22176 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 MongoDB repository interface.
-2026-05-20T19:20:47.657+05:30  INFO 22176 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-05-20T19:20:47.681+05:30  INFO 22176 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-20T19:20:47.681+05:30  INFO 22176 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-20T19:20:47.773+05:30  INFO 22176 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-20T19:20:47.773+05:30  INFO 22176 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2379 ms
-2026-05-20T19:20:48.482+05:30  INFO 22176 --- [employee-service] [cluster-ClusterId{value='6a0dbc3893b27f276032689c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=61902800, minRoundTripTimeNanos=0}
-2026-05-20T19:20:48.491+05:30  INFO 22176 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@6da23d69, com.mongodb.Jep395RecordCodecProvider@2ef7c153, com.mongodb.KotlinCodecProvider@54e6f3fb]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-20T19:20:49.021+05:30  WARN 22176 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-05-20T19:20:50.356+05:30  WARN 22176 --- [employee-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-05-22T12:19:42.969+05:30  INFO 9312 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@1ece0208, com.mongodb.Jep395RecordCodecProvider@5e6999a, com.mongodb.KotlinCodecProvider@687f0c41]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-22T12:19:43.165+05:30  INFO 9312 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-22T12:19:43.670+05:30  INFO 9312 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-22T12:19:44.040+05:30  INFO 9312 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-05-22T12:19:44.049+05:30  INFO 9312 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 4.521 seconds (process running for 6.189)
+2026-05-22T12:19:59.632+05:30  INFO 9312 --- [employee-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-22T12:19:59.633+05:30  INFO 9312 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-22T12:19:59.636+05:30  INFO 9312 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-22T12:20:00.348+05:30  INFO 9312 --- [employee-service] [http-nio-8081-exec-1] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: kajal
+2026-05-22T12:20:00.374+05:30  INFO 9312 --- [employee-service] [http-nio-8081-exec-1] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: kajal
+2026-05-22T12:20:00.546+05:30  INFO 9312 --- [employee-service] [http-nio-8081-exec-1] org.mongodb.driver.cluster               : Waiting for server to become available for operation with ID 4. Remaining time: 29986 ms. Selector: WritableServerSelector, topology description: {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}].
+2026-05-22T12:20:30.543+05:30 ERROR 9312 --- [employee-service] [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}]] with root cause
 
-Using generated security password: 4a8e29df-d5d3-47b1-b2f4-df639db540c5
+com.mongodb.MongoTimeoutException: Timed out while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}]
+	at com.mongodb.internal.connection.BaseCluster.logAndThrowTimeoutException(BaseCluster.java:427) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.lambda$selectServer$0(BaseCluster.java:154) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$onExistsAndExpired$16(Timeout.java:236) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$run$10(Timeout.java:201) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.TimePoint.checkedCall(TimePoint.java:99) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.call(Timeout.java:174) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.run(Timeout.java:194) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.onExistsAndExpired(Timeout.java:233) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.onExpired(Timeout.java:226) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:153) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SingleServerCluster.selectServer(SingleServerCluster.java:47) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:100) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:108) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getWriteConnectionSource(ClientSessionBinding.java:98) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:148) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$execute$3(MixedBulkWriteOperation.java:191) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$decorateWriteWithRetries$0(MixedBulkWriteOperation.java:148) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:210) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:80) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:446) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1116) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:498) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:481) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:475) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$17(MongoTemplate.java:1568) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:616) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1562) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1364) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1292) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.save(SimpleMongoRepository.java:98) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:720) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.18.jar:6.2.18]
+	at jdk.proxy3/jdk.proxy3.$Proxy80.save(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.18.jar:6.2.18]
+	at jdk.proxy3/jdk.proxy3.$Proxy80.save(Unknown Source) ~[na:na]
+	at com.ems.employee.serviceImpl.EmployeeServiceImpl.createEmployee(EmployeeServiceImpl.java:44) ~[classes/:na]
+	at com.ems.employee.controller.EmployeeController.createEmployee(EmployeeController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.54.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.54.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
+2026-05-22T12:21:01.482+05:30  INFO 9312 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-22T12:21:01.496+05:30  INFO 9312 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-22T12:21:08.834+05:30  INFO 15720 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 15720 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
+2026-05-22T12:21:08.838+05:30  INFO 15720 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-22T12:21:08.915+05:30  INFO 15720 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-22T12:21:08.916+05:30  INFO 15720 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-22T12:21:09.636+05:30  INFO 15720 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-22T12:21:09.691+05:30  INFO 15720 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 MongoDB repository interface.
+2026-05-22T12:21:10.514+05:30  INFO 15720 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-05-22T12:21:10.529+05:30  INFO 15720 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-22T12:21:10.529+05:30  INFO 15720 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-22T12:21:10.616+05:30  INFO 15720 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-22T12:21:10.616+05:30  INFO 15720 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1698 ms
+2026-05-22T12:21:10.894+05:30  INFO 15720 --- [employee-service] [cluster-ClusterId{value='6a0ffcdee6a26f7614ac17c0', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
 
-2026-05-20T19:20:50.377+05:30  INFO 22176 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-20T19:20:50.908+05:30  INFO 22176 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-05-20T19:20:50.934+05:30  INFO 22176 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 6.929 seconds (process running for 8.576)
-2026-05-20T20:21:23.735+05:30  INFO 22176 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-20T20:21:23.768+05:30  INFO 22176 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-20T20:21:28.524+05:30  INFO 12748 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 12748 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
-2026-05-20T20:21:28.526+05:30  INFO 12748 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-20T20:21:28.619+05:30  INFO 12748 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-20T20:21:28.620+05:30  INFO 12748 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-20T20:21:29.326+05:30  INFO 12748 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-20T20:21:29.379+05:30  INFO 12748 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 MongoDB repository interface.
-2026-05-20T20:21:30.172+05:30  INFO 12748 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-05-20T20:21:30.188+05:30  INFO 12748 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-20T20:21:30.189+05:30  INFO 12748 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-20T20:21:30.240+05:30  INFO 12748 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-20T20:21:30.240+05:30  INFO 12748 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1618 ms
-2026-05-20T20:21:30.594+05:30  INFO 12748 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2c81b993, com.mongodb.Jep395RecordCodecProvider@1373b9ae, com.mongodb.KotlinCodecProvider@11b78fea]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-20T20:21:30.609+05:30  INFO 12748 --- [employee-service] [cluster-ClusterId{value='6a0dca72db2b099af0ebd576', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=27159200, minRoundTripTimeNanos=0}
-2026-05-20T20:21:30.778+05:30  WARN 12748 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-05-20T20:21:31.298+05:30  WARN 12748 --- [employee-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.2.jar:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.5.2.jar:na]
+	... 3 common frames omitted
 
-Using generated security password: dad8cd38-2f8b-4ba7-95ac-ef951d95b8ba
+2026-05-22T12:21:10.914+05:30  INFO 15720 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@b12210e, com.mongodb.Jep395RecordCodecProvider@25b44cb3, com.mongodb.KotlinCodecProvider@5967223]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-22T12:21:11.091+05:30  INFO 15720 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-22T12:21:11.568+05:30  INFO 15720 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-22T12:21:11.889+05:30  INFO 15720 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-05-22T12:21:11.898+05:30  INFO 15720 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 4.039 seconds (process running for 5.519)
+2026-05-22T12:21:35.702+05:30  INFO 15720 --- [employee-service] [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-22T12:21:35.703+05:30  INFO 15720 --- [employee-service] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-22T12:21:35.705+05:30  INFO 15720 --- [employee-service] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-22T12:21:36.300+05:30  INFO 15720 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: kajal
+2026-05-22T12:21:36.302+05:30  INFO 15720 --- [employee-service] [http-nio-8081-exec-3] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: kajal
+2026-05-22T12:21:36.398+05:30  INFO 15720 --- [employee-service] [http-nio-8081-exec-3] org.mongodb.driver.cluster               : Waiting for server to become available for operation with ID 5. Remaining time: 29990 ms. Selector: WritableServerSelector, topology description: {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}].
+2026-05-22T12:22:06.414+05:30 ERROR 15720 --- [employee-service] [http-nio-8081-exec-3] c.e.e.exception.GlobalExceptionHandler   : Database error
 
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
+org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:97) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:74) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3037) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:618) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1562) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1364) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1292) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.save(SimpleMongoRepository.java:98) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:720) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.11.jar:3.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.18.jar:6.2.18]
+	at jdk.proxy3/jdk.proxy3.$Proxy80.save(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.18.jar:6.2.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.18.jar:6.2.18]
+	at jdk.proxy3/jdk.proxy3.$Proxy80.save(Unknown Source) ~[na:na]
+	at com.ems.employee.serviceImpl.EmployeeServiceImpl.createEmployee(EmployeeServiceImpl.java:44) ~[classes/:na]
+	at com.ems.employee.controller.EmployeeController.createEmployee(EmployeeController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.54.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.54.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.10.jar:6.5.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.54.jar:10.1.54]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+Caused by: com.mongodb.MongoTimeoutException: Timed out while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}]
+	at com.mongodb.internal.connection.BaseCluster.logAndThrowTimeoutException(BaseCluster.java:427) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.lambda$selectServer$0(BaseCluster.java:154) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$onExistsAndExpired$16(Timeout.java:236) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$run$10(Timeout.java:201) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.TimePoint.checkedCall(TimePoint.java:99) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.call(Timeout.java:174) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.run(Timeout.java:194) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.onExistsAndExpired(Timeout.java:233) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.time.Timeout.onExpired(Timeout.java:226) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:153) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SingleServerCluster.selectServer(SingleServerCluster.java:47) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:100) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:108) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getWriteConnectionSource(ClientSessionBinding.java:98) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:148) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$execute$3(MixedBulkWriteOperation.java:191) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$decorateWriteWithRetries$0(MixedBulkWriteOperation.java:148) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:210) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:80) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:446) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1116) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:498) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:481) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:475) ~[mongodb-driver-sync-5.5.2.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$17(MongoTemplate.java:1568) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:616) ~[spring-data-mongodb-4.5.11.jar:4.5.11]
+	... 132 common frames omitted
 
-2026-05-20T20:21:31.306+05:30  INFO 12748 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-20T20:21:31.466+05:30  INFO 12748 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-05-20T20:21:31.474+05:30  INFO 12748 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 3.926 seconds (process running for 5.129)
-2026-05-20T20:22:00.067+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-20T20:22:00.068+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-20T20:22:00.069+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-20T20:22:28.791+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
-2026-05-20T20:22:28.791+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-2] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
-2026-05-20T20:22:28.934+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : Returning 3 employees
-2026-05-20T20:22:39.536+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
-2026-05-20T20:22:39.537+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-3] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
-2026-05-20T20:22:39.539+05:30  INFO 12748 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : Returning 3 employees
-2026-05-20T22:13:17.224+05:30  INFO 12748 --- [employee-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-05-20T22:13:17.424+05:30  INFO 12748 --- [employee-service] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-20T22:13:17.501+05:30  INFO 12748 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-20T22:13:18.563+05:30  INFO 12748 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 12748 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
-2026-05-20T22:13:18.564+05:30  INFO 12748 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-20T22:13:19.167+05:30  INFO 12748 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-20T22:13:19.183+05:30  INFO 12748 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 MongoDB repository interface.
-2026-05-20T22:13:19.504+05:30  INFO 12748 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-05-20T22:13:19.508+05:30  INFO 12748 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-20T22:13:19.508+05:30  INFO 12748 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-20T22:13:19.568+05:30  INFO 12748 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-20T22:13:19.569+05:30  INFO 12748 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 993 ms
-2026-05-20T22:13:19.631+05:30  INFO 12748 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2c81b993, com.mongodb.Jep395RecordCodecProvider@1373b9ae, com.mongodb.KotlinCodecProvider@11b78fea]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-20T22:13:19.650+05:30  INFO 12748 --- [employee-service] [cluster-ClusterId{value='6a0de4a7db2b099af0ebd577', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15776500, minRoundTripTimeNanos=0}
-2026-05-20T22:13:19.670+05:30  WARN 12748 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-05-20T22:13:19.836+05:30  WARN 12748 --- [employee-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-05-22T12:22:06.513+05:30  WARN 15720 --- [employee-service] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: getsockopt}}]]
+2026-05-22T12:30:00.419+05:30  INFO 15720 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-22T12:30:00.433+05:30  INFO 15720 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-22T12:30:08.416+05:30  INFO 14924 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 14924 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
+2026-05-22T12:30:08.419+05:30  INFO 14924 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-22T12:30:08.495+05:30  INFO 14924 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-22T12:30:08.496+05:30  INFO 14924 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-22T12:30:09.478+05:30  INFO 14924 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-22T12:30:09.557+05:30  INFO 14924 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 MongoDB repository interface.
+2026-05-22T12:30:10.605+05:30  INFO 14924 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-05-22T12:30:10.627+05:30  INFO 14924 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-22T12:30:10.628+05:30  INFO 14924 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-22T12:30:10.770+05:30  INFO 14924 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-22T12:30:10.771+05:30  INFO 14924 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2273 ms
+2026-05-22T12:30:11.179+05:30  INFO 14924 --- [employee-service] [cluster-ClusterId{value='6a0ffefbfff614d2767647bd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
 
-Using generated security password: 344d3706-4756-4da5-938c-25763155d13e
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.2.jar:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.5.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.5.2.jar:na]
+	... 3 common frames omitted
 
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-20T22:13:19.837+05:30  INFO 12748 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-20T22:13:19.940+05:30  INFO 12748 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-05-20T22:13:19.946+05:30  INFO 12748 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 1.665 seconds (process running for 6713.6)
-2026-05-20T22:13:19.952+05:30  INFO 12748 --- [employee-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
-
-
-==========================
-CONDITION EVALUATION DELTA
-==========================
-
-
-Positive matches:
------------------
-
-    None
-
-
-Negative matches:
------------------
-
-   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
-      Did not match:
-         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
-
-   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2026-05-20T22:15:31.146+05:30  INFO 12748 --- [employee-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-20T22:15:31.156+05:30  INFO 12748 --- [employee-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-20T22:15:35.726+05:30  INFO 23752 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 22 with PID 23752 (C:\employee-management-system\employee-service\target\classes started by khanl in C:\employee-management-system)
-2026-05-20T22:15:35.728+05:30  INFO 23752 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-20T22:15:35.806+05:30  INFO 23752 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-20T22:15:35.807+05:30  INFO 23752 --- [employee-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-20T22:15:36.690+05:30  INFO 23752 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-20T22:15:36.811+05:30  INFO 23752 --- [employee-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 MongoDB repository interface.
-2026-05-20T22:15:38.061+05:30  INFO 23752 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-05-20T22:15:38.087+05:30  INFO 23752 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-20T22:15:38.088+05:30  INFO 23752 --- [employee-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-20T22:15:38.160+05:30  INFO 23752 --- [employee-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-20T22:15:38.160+05:30  INFO 23752 --- [employee-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2351 ms
-2026-05-20T22:15:38.647+05:30  INFO 23752 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4de18441, com.mongodb.Jep395RecordCodecProvider@7ec4d179, com.mongodb.KotlinCodecProvider@6ab19fb4]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-20T22:15:38.668+05:30  INFO 23752 --- [employee-service] [cluster-ClusterId{value='6a0de5326d10772c99782d25', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=35723400, minRoundTripTimeNanos=0}
-2026-05-20T22:15:38.945+05:30  WARN 23752 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-05-20T22:15:39.573+05:30  INFO 23752 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-20T22:15:40.081+05:30  INFO 23752 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-05-20T22:15:40.093+05:30  INFO 23752 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 5.57 seconds (process running for 7.039)
-2026-05-20T22:15:53.528+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-20T22:15:53.529+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-20T22:15:53.531+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-20T22:16:10.396+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
-2026-05-20T22:16:10.397+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-2] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
-2026-05-20T22:16:10.638+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : Returning 3 employees
-2026-05-20T22:16:30.385+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : GET /employees/6a0c601064a729be21fd9214 - Fetching employee
-2026-05-20T22:16:30.386+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-3] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching employee with id: 6a0c601064a729be21fd9214
-2026-05-20T22:18:04.602+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-5] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: khaka
-2026-05-20T22:18:04.603+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-5] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: khaka
-2026-05-20T22:18:04.685+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-5] c.e.e.controller.EmployeeController      : Employee created with id: 6a0de5c46d10772c99782d26
-2026-05-20T22:18:55.692+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-6] c.e.e.controller.EmployeeController      : PUT /employees/6a0c601064a729be21fd9214 - Updating employee
-2026-05-20T22:18:55.693+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-6] c.e.e.serviceImpl.EmployeeServiceImpl    : Updating employee with id: 6a0c601064a729be21fd9214
-2026-05-20T22:18:55.785+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-6] c.e.e.controller.EmployeeController      : Employee updated: 6a0c601064a729be21fd9214
-2026-05-20T22:19:38.841+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-7] c.e.e.controller.EmployeeController      : DELETE /employees/6a0c597164a729be21fd9213 - Deleting employee
-2026-05-20T22:19:38.841+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-7] c.e.e.serviceImpl.EmployeeServiceImpl    : Deleting employee with id: 6a0c597164a729be21fd9213
-2026-05-20T22:19:38.864+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-7] c.e.e.controller.EmployeeController      : Employee deleted: 6a0c597164a729be21fd9213
-2026-05-20T22:19:43.452+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-8] c.e.e.controller.EmployeeController      : DELETE /employees/6a0c597164a729be21fd9213 - Deleting employee
-2026-05-20T22:19:43.452+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-8] c.e.e.serviceImpl.EmployeeServiceImpl    : Deleting employee with id: 6a0c597164a729be21fd9213
-2026-05-20T22:19:43.462+05:30 ERROR 23752 --- [employee-service] [http-nio-8081-exec-8] c.e.e.exception.GlobalExceptionHandler   : Employee not found: Employee not found with id: 6a0c597164a729be21fd9213
-2026-05-20T22:19:43.534+05:30  WARN 23752 --- [employee-service] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ems.employee.exception.EmployeeNotFoundException: Employee not found with id: 6a0c597164a729be21fd9213]
-2026-05-20T22:20:01.805+05:30 ERROR 23752 --- [employee-service] [http-nio-8081-exec-9] c.e.e.exception.GlobalExceptionHandler   : Unexpected error occurred: Request method 'PUT' is not supported
-2026-05-20T22:20:01.811+05:30  WARN 23752 --- [employee-service] [http-nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
-2026-05-20T22:20:17.505+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-10] c.e.e.controller.EmployeeController      : PUT /employees/6a0c597164a729be21fd9213 - Updating employee
-2026-05-20T22:20:17.505+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-10] c.e.e.serviceImpl.EmployeeServiceImpl    : Updating employee with id: 6a0c597164a729be21fd9213
-2026-05-20T22:20:17.514+05:30 ERROR 23752 --- [employee-service] [http-nio-8081-exec-10] c.e.e.exception.GlobalExceptionHandler   : Employee not found: Employee not found with id: 6a0c597164a729be21fd9213
-2026-05-20T22:20:17.516+05:30  WARN 23752 --- [employee-service] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ems.employee.exception.EmployeeNotFoundException: Employee not found with id: 6a0c597164a729be21fd9213]
-2026-05-20T22:20:27.690+05:30 ERROR 23752 --- [employee-service] [http-nio-8081-exec-1] c.e.e.exception.GlobalExceptionHandler   : Unexpected error occurred: Request method 'PUT' is not supported
-2026-05-20T22:20:27.693+05:30  WARN 23752 --- [employee-service] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
-2026-05-20T22:20:42.538+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : GET /employees - Fetching all employees
-2026-05-20T22:20:42.538+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-2] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching all employees from database
-2026-05-20T22:20:42.543+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-2] c.e.e.controller.EmployeeController      : Returning 3 employees
-2026-05-20T22:20:53.041+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-3] c.e.e.controller.EmployeeController      : GET /employees/6a0c597164a729be21fd9213 - Fetching employee
-2026-05-20T22:20:53.042+05:30  INFO 23752 --- [employee-service] [http-nio-8081-exec-3] c.e.e.serviceImpl.EmployeeServiceImpl    : Fetching employee with id: 6a0c597164a729be21fd9213
-2026-05-20T22:20:53.047+05:30 ERROR 23752 --- [employee-service] [http-nio-8081-exec-3] c.e.e.exception.GlobalExceptionHandler   : Employee not found: Employee not found with id: 6a0c597164a729be21fd9213
-2026-05-20T22:20:53.050+05:30  WARN 23752 --- [employee-service] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ems.employee.exception.EmployeeNotFoundException: Employee not found with id: 6a0c597164a729be21fd9213]
+2026-05-22T12:30:11.206+05:30  INFO 14924 --- [employee-service] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22+36-2370"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@45bff80e, com.mongodb.Jep395RecordCodecProvider@13b36a72, com.mongodb.KotlinCodecProvider@49d350c6]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-22T12:30:11.424+05:30  INFO 14924 --- [employee-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-22T12:30:11.847+05:30  INFO 14924 --- [employee-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-22T12:30:12.200+05:30  INFO 14924 --- [employee-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-05-22T12:30:12.361+05:30  INFO 14924 --- [employee-service] [restartedMain] c.e.employee.EmployeeServiceApplication  : Started EmployeeServiceApplication in 5.215 seconds (process running for 6.621)
+2026-05-22T12:30:31.329+05:30  INFO 14924 --- [employee-service] [cluster-ClusterId{value='6a0ffefbfff614d2767647bd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=28, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=100804400, minRoundTripTimeNanos=0}
+2026-05-22T12:30:35.290+05:30  INFO 14924 --- [employee-service] [http-nio-8081-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-22T12:30:35.291+05:30  INFO 14924 --- [employee-service] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-22T12:30:35.294+05:30  INFO 14924 --- [employee-service] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-22T12:30:36.136+05:30  INFO 14924 --- [employee-service] [http-nio-8081-exec-7] c.e.e.controller.EmployeeController      : POST /employees - Creating employee: kajal
+2026-05-22T12:30:36.139+05:30  INFO 14924 --- [employee-service] [http-nio-8081-exec-7] c.e.e.serviceImpl.EmployeeServiceImpl    : Creating new employee with name: kajal
+2026-05-22T12:30:36.444+05:30  INFO 14924 --- [employee-service] [http-nio-8081-exec-7] c.e.e.controller.EmployeeController      : Employee created with id: 6a0fff14fff614d2767647be
