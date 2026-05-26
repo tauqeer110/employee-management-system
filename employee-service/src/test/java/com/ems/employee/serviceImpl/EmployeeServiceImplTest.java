@@ -4,7 +4,6 @@ import com.ems.employee.dto.EmployeeDTO;
 import com.ems.employee.entity.Employee;
 import com.ems.employee.exception.EmployeeNotFoundException;
 import com.ems.employee.repository.EmployeeRepository;
-import com.ems.employee.serviceImpl.EmployeeServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

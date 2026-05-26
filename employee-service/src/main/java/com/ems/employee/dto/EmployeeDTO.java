@@ -9,11 +9,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-/**
- * Data Transfer Object for Employee.
- * Used to receive and send data from/to the client.
- * Validation annotations ensure clean input before hitting the service layer.
- */
+
 @Getter
 @Setter
 @NoArgsConstructor
