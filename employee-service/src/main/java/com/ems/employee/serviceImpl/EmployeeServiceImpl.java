@@ -5,28 +5,25 @@ import com.ems.employee.entity.Employee;
 import com.ems.employee.exception.EmployeeNotFoundException;
 import com.ems.employee.repository.EmployeeRepository;
 import com.ems.employee.service.EmployeeService;
+import com.ems.employee.util.EmployeeMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-/*
- * Spring Cache annotations:
- *  - @Cacheable    : returns cached value if present (used on getById and getAll)
- *  - @CachePut     : always runs the method and updates the cache (used on update)
- *  - @CacheEvict   : removes the entry from cache (used on delete)
- */
+import static com.ems.employee.util.EmployeeMapper.mapToDTO;
+import static com.ems.employee.util.EmployeeMapper.mapToEntity;
+
 @Slf4j
 @Service
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
-
-    private static final String CACHE_NAME = "employees";
 
     private final EmployeeRepository employeeRepository;
 
@@ -37,6 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     // ------------------------------------------------------------------ CREATE
     @Override
+    @CacheEvict(value = "employees", key = "'all'")
     public EmployeeDTO createEmployee(EmployeeDTO employeeDTO) {
         log.info("Creating new employee with name: {}", employeeDTO.getName());
 
@@ -49,19 +47,19 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     // ------------------------------------------------------------------ GET ALL
     @Override
-    @Cacheable(value = CACHE_NAME, key = "'all'")
+    @Cacheable(value = "employees", key = "'all'")
     public List<EmployeeDTO> getAllEmployees() {
         log.info("Fetching all employees from database");
 
         return employeeRepository.findAll()
                 .stream()
-                .map(this::mapToDTO)
+                .map(EmployeeMapper::mapToDTO)
                 .collect(Collectors.toList());
     }
 
     // ------------------------------------------------------------------ GET BY ID
     @Override
-    @Cacheable(value = CACHE_NAME, key = "#id")
+    @Cacheable(value = "employees", key = "#id")
     public EmployeeDTO getEmployeeById(String id) {
         log.info("Fetching employee with id: {}", id);
 
@@ -74,7 +72,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     // ------------------------------------------------------------------ UPDATE
     @Override
-    @CachePut(value = CACHE_NAME, key = "#id")
+    @CachePut(value = "employees", key = "#id")
     public EmployeeDTO updateEmployee(String id, EmployeeDTO employeeDTO) {
         log.info("Updating employee with id: {}", id);
 
@@ -94,7 +92,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     // ------------------------------------------------------------------ DELETE
     @Override
-    @CacheEvict(value = CACHE_NAME, allEntries = true)
+    @CacheEvict(value = "employees", allEntries = true)
     public void deleteEmployee(String id) {
         log.info("Deleting employee with id: {}", id);
 
@@ -105,26 +103,4 @@ public class EmployeeServiceImpl implements EmployeeService {
         log.debug("Employee deleted with id: {}", id);
     }
 
-    // ------------------------------------------------------------------ HELPERS
-    //  Converts EmployeeDTO → Employee entity.
-
-    private Employee mapToEntity(EmployeeDTO dto) {
-        Employee employee = new Employee();
-        employee.setName(dto.getName());
-        employee.setAge(dto.getAge());
-        employee.setAddress(dto.getAddress());
-        return employee;
-    }
-
-
-    // Converts Employee entity → EmployeeDTO.
-
-    private EmployeeDTO mapToDTO(Employee employee) {
-        EmployeeDTO dto = new EmployeeDTO();
-        dto.setId(employee.getId());
-        dto.setName(employee.getName());
-        dto.setAge(employee.getAge());
-        dto.setAddress(employee.getAddress());
-        return dto;
-    }
 }

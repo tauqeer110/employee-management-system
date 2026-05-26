@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 import java.util.List;
 
-/*
-  REST Controller for Employee CRUD operations.
-  @Valid triggers DTO validation before the request reaches the service layer.
-  ResponseEntity gives us full control over HTTP status codes.
- */
 @RestController
 @RequestMapping("/employees")
 @Slf4j

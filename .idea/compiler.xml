@@ -10,10 +10,12 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="api-gateway" />
         <module name="employee-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="22" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

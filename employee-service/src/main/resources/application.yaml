@@ -11,8 +11,17 @@ spring:
       name: admin
       password: admin123
 
+  cache:
+    type: caffeine
+    cache-names:
+      - employees
+    caffeine:
+      spec: maximumSize=10,expireAfterWrite=10m
+
+
+
 server:
-  port: 8081
+  port: 8080
 
 logging:
   file:
