@@ -88,7 +88,7 @@ class EmployeeServiceImplTest {
         List<EmployeeDTO> result = employeeService.getAllEmployees();
 
         assertEquals(1, result.size());
-        assertEquals("1", result.getFirst().getId());
+        assertEquals("1", result.get(0).getId()); // <-- Changed from getFirst() to get(0)
 
         verify(employeeRepository, times(1)).findAll();
     }
