@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: employee-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee_management_system?createDatabaseIfNotExist=true
+    username: root
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  cache:
+    type: caffeine
+    cache-names:
+      - employees
+    caffeine:
+      spec: maximumSize=10,expireAfterWrite=10m
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+      properties:
+        spring.json.add.type.headers: false
+
+    topic:
+      employee: employee-topic
+
+server:
+  port: 8080
+
+logging:
+  file:
+    name: logs/employee-service.log
+
+  level:
+    root: INFO
